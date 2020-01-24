@@ -5,18 +5,30 @@ def HDL_analysis(HDL_level):
         return "Borderline low"
     else:
         return "Low"
-
+def LDL_analysis(LDL_level):
+    if LDL_level >= 190:
+        return "Very High"
+    elif 160 <= LDL_level < 190:
+        return "High"
+    elif 130 <= LDL_level < 160:
+        return "Borderline"
+    else:
+        return "Normal"
 
 def cholesterol_analysis():
     print("Cholesterol Analysis")
-    HDLinput = input("Enter test result: ")
-    test_info = HDLinput.split("=")
+    typetest = input("Enter test result: ")
+    test_info = typetest.split("=")
+    #print(testinfo[0].strip(" "))
+    #print(test_info[1].strip(" "))
     if test_info[0] == "HDL":
         answer = HDL_analysis(int(test_info[1]))
         print("The level is {}".format(answer))
+    if test_info[0] == "LDL":
+        answer = LDL_analysis(int(test_info[1]))
+        print("The level is {}".format(answer))
 
 def interface():
-    choice = 0
     while True:
         print("Cholesterol Calc")
         print("Options")
