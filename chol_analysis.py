@@ -28,6 +28,9 @@ def cholesterol_analysis():
         answer = LDL_analysis(int(test_info[1]))
         print("The level is {}".format(answer))
 
+def new_feature():
+    pass
+
 def interface():
     while True:
         print("Cholesterol Calc")
