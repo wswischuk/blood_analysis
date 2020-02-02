@@ -31,6 +31,11 @@ def cholesterol_analysis():
 def new_feature():
     pass
 
+def name_function():
+    first_name = input("Enter first name: ")
+    last_name = input("Enter last name: ")
+    full_name = [first name, last name]
+
 def interface():
     while True:
         print("Cholesterol Calc")
