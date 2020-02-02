@@ -53,12 +53,12 @@ def interface():
             cholesterol_analysis()
 
 
-def fever_check(test_list):
+def fever_check(temp_list):
     fever = False
     for temperature in temp_list:
         if temperature > 98.6:
             fever = True
-    return Fever
+    return fever
 
 
 if __name__ == "__main__":
